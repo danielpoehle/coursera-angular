@@ -4,12 +4,22 @@
     <meta charset="utf-8">
     <script src="angular.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
-    <title>Coursera Angular JS</title>
+    <title>Name Calulator</title>
   </head>
   <body>
-    <h1>Hello and good morning World!</h1>
-    <div ng-controller="myController" >
-
+    <h1>Name CALCULATOR</h1>
+    <div ng-controller="myController">
+      <div>
+        Your Name
+        <input type="text"
+          ng-model="name"
+          ng-keyup="displayNumeric()">
+      </div>
+      <div>
+        Total numeric value of your name is {{totalValue}}.
+        <br>
+        Inside my input is: {{name}}.
+      </div>
     </div>
   </body>
 </html>
