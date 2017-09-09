@@ -4,7 +4,11 @@
 
 angular.module('myApp', [])
 
-.controller('myController', function($scope){
+.controller('myController', DIController);
+
+DIController.$inject = ['$scope']; //if minified then the inject will still work
+
+function DIController($scope){
   $scope.name = "";
   $scope.totalValue = 0;
   $scope.displayNumeric = function() {
@@ -20,11 +24,6 @@ angular.module('myApp', [])
 
     return totalStringValue;
   }
-
-
-
-
-
-});
+}
 
 })();
